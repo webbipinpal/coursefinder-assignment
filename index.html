@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Coursefinder Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="styles.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Header Start here -->
+    <header class="position-fixed w-100 z-1">
+        <nav class="navbar navbar-expand-lg py-3">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white m-lg-0" href="#">
+                    <img src="assets/images/coursefinder.ai.svg" alt="logo-img" />
+                </a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <form class="d-flex mb-0 position-relative" role="search">
+                        <img src="assets/images/search.svg" alt="search-icon" class="position-absolute nav-search" />
+                        <input class="form-control me-2 ps-5 nav-search-input" type="search" placeholder="Search"
+                            aria-label="Search">
+                    </form>
+                </div>
+                <div class="d-flex align-items-center gap-2 gap-md-3 justify-content-end">
+                    <div class="d-flex gap-2">
+                        <img src="assets/images/info.svg" alt="icon" />
+                        <span class="text-white d-none d-md-block">Whats New?</span>
+                    </div>
+                    <div class="nav-notification position-relative">
+                        <img src="assets/images/notification.svg" alt="icon" />
+                        <span class="notification-count rounded-circle text-white">2</span>
+                    </div>
+                    <div>
+                        <div class="d-flex align-items-center gap-3">
+                            <img class="d-none d-md-block" src="assets/images/profile-img.png" alt="profile-img" />
+                            <div class="dropdown">
+                                <button class="bg-transparent border-0 dropdown-toggle text-white" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dikha Goel
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item active" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header End here -->
+    <!-- Main Wrapper start here -->
+    <section class="main-wrapper">
+        <div class="d-flex mx-auto">
+            <aside class="left-section">
+                <!-- Side Menu bar start here -->
+                <nav class="side-navbar active-nav d-flex justify-content-between flex-column" id="sidebar">
+                    <ul class="nav side-menu flex-column text-white w-100 pt-4">
+                        <li href="#" class="nav-link active">
+                            <img src="assets/images/home.svg" alt="icon" />
+                            <span class="mx-2">Dashboard</span>
+                        </li>
+                        <li href="#" class="nav-link">
+                            <img src="assets/images/student.svg" alt="icon" />
+                            <span class="mx-2">Students</span>
+                        </li>
+                        <li href="#" class="nav-link">
+                            <img src="assets/images/applications.svg" alt="icon" />
+                            <span class="mx-2">Applications</span>
+                        </li>
+                        <li href="#" class="nav-link">
+                            <img src="assets/images/search-course.svg" alt="icon" />
+                            <span class="mx-2">Search Courses</span>
+                        </li>
+                        <li href="#" class="nav-link">
+                            <img src="assets/images/wallet.svg" alt="icon">
+                            <span class="mx-2">Wallet</span>
+                        </li>
+                        <li href="#" class="nav-link">
+                            <img src="assets/images/commission.svg" alt="icon" />
+                            <span class="mx-2">Commission Payments</span>
+                        </li>
+                        <li href="#" class="nav-link">
+                            <img src="assets/images/allied.svg" alt="icon" />
+                            <div class="dropdown">
+                                <button class="bg-transparent border-0 dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Allied Services
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item active" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li href="#" class="nav-link">
+                            <img src="assets/images/learning-resources.svg" alt="icon" />
+                            <span class="mx-2">Learning Resources</span>
+                        </li>
+                        <li href="#" class="nav-link">
+                            <img src="assets/images/quick-links.svg" alt="icon">
+                            <div class="dropdown">
+                                <button class="bg-transparent border-0 dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Quick Links
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item active" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="submit-feedback-btn">
+                        <a href="#" class="nav-link d-flex">
+                            <img src="assets/images/feedback.svg" alt="icon" />
+                            <span class="mx-2">Submit feedback</span>
+                        </a>
+                    </div>
+                    <span href="#" class="nav-link h4 w-100 mb-5">
+                        <a href=""><i class="bx bxl-instagram-alt text-white"></i></a>
+                        <a href=""><i class="bx bxl-twitter px-2 text-white"></i></a>
+                        <a href=""><i class="bx bxl-facebook text-white"></i></a>
+                    </span>
+                </nav>
+                <!-- Side Menu bar start here -->
+            </aside>
+            <div class="middle-section my-container active-cont">
+                <div class="p-2 p-md-4">
+                    <nav class="navbar top-navbar position-fixed d-flex align-items-center justify-content-center">
+                        <a class="d-flex align-items-center" id="menu-btn">
+                            <img src="assets/images/left-arrow-img.svg" alt="menu-collapse" />
+                        </a>
+                    </nav>
+                    <!-- top bar start here-->
+                    <div class="d-md-flex d-block align-items-center justify-content-between mb-2 p-2 p-md-3">
+                        <h4>Hey, Good Morning <b>Diksha</b></h4>
+                        <div class="d-flex gap-3 action_btn">
+                            <button class="btn refresh_btn">Refresh Dashboard</button>
+                            <button class="btn register_btn">Register Student</button>
+                        </div>
+                    </div>
+                    <!-- top bar end here-->
+                    <div class="row mx-auto">
+                        <div class="col-md-8 col">
+                            <!-- section start here -->
+                            <section class="shadow-sm bg-body rounded mb-5 py-4 px-3">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <div class="input-group mb-1 input-group-lg">
+                                                <select class="form-select" aria-label="Default select w mb-1 ">
+                                                    <option selected>Year</option>
+                                                    <option value="1">2001</option>
+                                                    <option value="2">2002</option>
+                                                    <option value="3">2003</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-1">
+                                            <div class="input-group input-group-lg">
+                                                <input type="Date" class="form-control" placeholder="Date Created" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-1">
+                                            <div class="input-group input-group-lg">
+                                                <input type="Date" class="form-control" placeholder="Select intake" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-lg-6 mt-1">
+                                            <div class="input-group input-group-lg">
+                                                <select class="form-select" aria-label="Default select w mb-1">
+                                                    <option selected>Countries</option>
+                                                    <option value="1">2001</option>
+                                                    <option value="2">2002</option>
+                                                    <option value="3">2003</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 mt-1">
+                                            <button type="button" class="btn btn-outline-primary btn-lg h-100 apply-filter-btn">
+                                                Apply Filters
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- section end here -->
+                            <!-- section start here -->
+                            <section class="services-card-block">
+                                <div class="my-3 pb-5">
+                                    <div
+                                        class="d-flex gap-4 gap-md-4 justify-content-center justify-content-lg-between flex-wrap flex-lg-nowrap align-items-center">
+                                        <div
+                                            class="offer-card offer-card-1 text-center rounded btn-sm position-relative">
+                                            <h1 class="text-primary">18</h1>
+                                            <p>Conditional</p>
+                                            <button class="btn btn-sm offer-btn bg-white">
+                                                Offer Letter
+                                            </button>
+                                        </div>
+                                        <div class="offer-card offer-card-2 text-center rounded position-relative">
+                                            <h1 class="text-success">22</h1>
+                                            <p>Un-Conditional</p>
+                                            <button class="btn btn-outline-success btn-sm offer-btn bg-white">
+                                                Offer Letter
+                                            </button>
+                                        </div>
+                                        <div class="offer-card offer-card-3 text-center rounded position-relative">
+                                            <h1 class="text-warning">30</h1>
+                                            <p>Payment Received</p>
+                                            <button class="btn btn-outline-warning btn-sm offer-btn bg-white">
+                                                Offer Letter
+                                            </button>
+                                        </div>
+                                        <div class="offer-card offer-card-4 text-center rounded position-relative">
+                                            <h1 class="text-danger">8</h1>
+                                            <p>Payment Received</p>
+                                            <button class="btn btn-outline-danger btn-sm offer-btn bg-white">
+                                                Offer Letter
+                                            </button>
+                                        </div>
+                                        <div class="offer-card offer-card-5 text-center rounded position-relative">
+                                            <h1 class="text-dark">18</h1>
+                                            <p>Visa Received</p>
+                                            <button class="btn btn-outline-dark btn-sm offer-btn bg-white">
+                                                Offer Letter
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- section end here -->
+                            <!-- section start here -->
+                            <section class="shadow-sm bg-body rounded">
+                                <div class="pt-4 px-5">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h4>Application</h4>
+                                        <img src="assets/images/maximize.svg" alt="maximize" />
+                                    </div>
+                                    <div class="py-2 pb-4">
+                                        <ul class="nav nav-pills">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" aria-current="page" href="#">Pending On
+                                                    Me(15)</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Lorem Ipsum (12)</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Lorem Ipsum (18)</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="table-responsive">
+                                    <table id="example" class="table" style="width: 100%">
+                                        <thead>
+                                            <tr class="bg-light">
+                                                <th class="td-left-padding">
+                                                    Ack.no. <img src="assets/images/sort.svg" alt="sorting-icon" />
+                                                </th>
+                                                <th>Student name <img src="assets/images/sort.svg" alt="sorting-icon" /></th>
+                                                <th>University <img src="assets/images/sort.svg" alt="sorting-icon" /></th>
+                                                <th>Program <img src="assets/images/sort.svg" alt="sorting-icon" /></th>
+                                                <th>Pending Since <img src="assets/images/sort.svg" alt="sorting-icon" /></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="td-left-padding">117110/22-23</td>
+                                                <td>
+                                                    <p class="mt-0 mb-0">Rishi Joshi</p>
+                                                    <p class="mt-0 mb-0 grey-color">rishijoshi@gmail.com</p>
+                                                </td>
+                                                <td>Sheffield Hallam...</td>
+                                                <td>
+                                                    <p class="mt-0 mb-0">Msc</p>
+                                                    <p class="mt-0 mb-0">Internation...</p>
+                                                </td>
+                                                <td>
+                                                    <p class="mt-0 mb-0">1 Day</p>
+                                                    <p class="mt-0 mb-0 grey-color">12 Dec 2022</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td-left-padding">117110/22-23</td>
+                                                <td>
+                                                    <p class="mt-0 mb-0">Rishi Joshi</p>
+                                                    <p class="mt-0 mb-0 grey-color">rishijoshi@gmail.com</p>
+                                                </td>
+                                                <td>Sheffield Hallam...</td>
+                                                <td>
+                                                    <p class="mt-0 mb-0">Msc</p>
+                                                    <p class="mt-0 mb-0">Internation...</p>
+                                                </td>
+                                                <td>
+                                                    <p class="mt-0 mb-0">1 Day</p>
+                                                    <p class="mt-0 mb-0 grey-color">12 Dec 2022</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td-left-padding">117110/22-23</td>
+                                                <td>
+                                                    <p class="mt-0 mb-0">Rishi Joshi</p>
+                                                    <p class="mt-0 mb-0 grey-color">rishijoshi@gmail.com</p>
+                                                </td>
+                                                <td>Sheffield Hallam...</td>
+                                                <td>
+                                                    <p class="mt-0 mb-0">Msc</p>
+                                                    <p class="mt-0 mb-0">Internation...</p>
+                                                </td>
+                                                <td>
+                                                    <p class="mt-0 mb-0">1 Day</p>
+                                                    <p class="mt-0 mb-0 grey-color">12 Dec 2022</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td-left-padding">117110/22-23</td>
+                                                <td>
+                                                    <p class="mt-0 mb-0">Rishi Joshi</p>
+                                                    <p class="mt-0 mb-0 grey-color">rishijoshi@gmail.com</p>
+                                                </td>
+                                                <td>Sheffield Hallam...</td>
+                                                <td>
+                                                    <p class="mt-0 mb-0">Msc</p>
+                                                    <p class="mt-0 mb-0">Internation...</p>
+                                                </td>
+                                                <td>
+                                                    <p class="mt-0 mb-0">1 Day</p>
+                                                    <p class="mt-0 mb-0 grey-color">12 Dec 2022</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <nav aria-label="Page navigation ">
+                                    <ul class=" table-pagination pagination justify-content-center py-4 gap-3">
+                                        <li class="page-item">
+                                            <a class="page-link border-0 d-flex align-items-center justify-content-center" href="#">
+                                                <img src="assets/images/left-arrow-img.svg" alt="left-arrow" width="15px" />
+                                            </a>
+                                        </li>
+                                        <li class="page-item active fw-bold">
+                                            <a class="page-link grey-color bg-transparent shadow border-0 text-dark z-0" href="#">1</a>
+                                        </li>
+                                        <li class="page-item fw-bold">
+                                            <a class="page-link grey-color text-secondary fw-normal" href="#">2</a>
+                                        </li>
+                                        <li class="page-item fw-bold">
+                                            <a class="page-link grey-color text-secondary fw-normal" href="#">3</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link border-0 d-flex align-items-center justify-content-center" href="#"><img
+                                                    src="assets/images/chevron-right.svg" alt="icon" width="30px" /></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </section>
+                            <!-- section end here -->
+                            <!-- section start here -->
+                            <section id="#servicecarousel" class="carousel slide service-carousal" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="card mb-3 border-0 bg-transparent">
+                                            <div class="d-flex gap-3">
+                                                <div class="">
+                                                    <div class="card-body p-0">
+                                                        <div class="row mx-auto gap-4 gap-md-0">
+                                                            <div class="col-md-8 col">
+                                                                <p class="text-white">Allied Services</p>
+                                                                <h4 class="card-title fw-medium text-white">Indian
+                                                                    student tops harward!</h4>
+                                                                <p
+                                                                    class="card-text news-card-text fw-normal text-white">
+                                                                    Provide end to end overseas education loan
+                                                                    assistance to your students to help them achieve
+                                                                    their goal</p>
+                                                                <button class="btn btn-lg bg-white get-started-btn">Get
+                                                                    Started</button>
+                                                            </div>
+                                                            <div class="col-md-4 col">
+                                                                <div class="avatar-img-section">
+                                                                    <img src="assets/images/avatar-img.png" alt="img"
+                                                                        width="100%" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="card mb-3 border-0 bg-transparent">
+                                            <div class="d-flex gap-3">
+                                                <div class="">
+                                                    <div class="card-body p-0">
+                                                        <div class="row mx-auto gap-4 gap-md-0">
+                                                            <div class="col-md-8 col">
+                                                                <p class="text-white">Allied Services</p>
+                                                                <h4 class="card-title fw-medium text-white">Indian
+                                                                    student tops harward!</h4>
+                                                                <p
+                                                                    class="card-text news-card-text fw-normal text-white">
+                                                                    Provide end to end overseas education loan
+                                                                    assistance to your students to help them achieve
+                                                                    their goal</p>
+                                                                <button class="btn btn-lg bg-white get-started-btn">Get
+                                                                    Started</button>
+                                                            </div>
+                                                            <div class="col-md-4 col">
+                                                                <div class="avatar-img-section">
+                                                                    <img src="assets/images/avatar-img.png" alt="img"
+                                                                        width="100%" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="card mb-3 border-0 bg-transparent">
+                                            <div class="d-flex gap-3">
+                                                <div class="">
+                                                    <div class="card-body p-0">
+                                                        <div class="row mx-auto gap-4 gap-md-0">
+                                                            <div class="col-md-8">
+                                                                <p class="text-white">Allied Services</p>
+                                                                <h4 class="card-title fw-medium text-white">Indian
+                                                                    student tops harward!</h4>
+                                                                <p
+                                                                    class="card-text news-card-text fw-normal text-white">
+                                                                    Provide end to end overseas education loan
+                                                                    assistance to your students to help them achieve
+                                                                    their goal</p>
+                                                                <button class="btn btn-lg bg-white get-started-btn">Get
+                                                                    Started</button>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="avatar-img-section">
+                                                                    <img src="assets/images/avatar-img.png" alt="img"
+                                                                        width="100%" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-indicators position-relative mb-0">
+                                    <button type="button" data-bs-target="#servicecarousel" data-bs-slide-to="0"
+                                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#servicecarousel" data-bs-slide-to="1"
+                                        aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#servicecarousel" data-bs-slide-to="2"
+                                        aria-label="Slide 3"></button>
+                                </div>
+                            </section>
+                            <!-- section end here -->
+                        </div>
+                        <div class="col-md-4 col">
+                            <aside class="right-section">
+                                <!-- cart start here -->
+                                <div class="bg-white p-3 news-card">
+                                    <p class="fw-bold">News Bulletin</p>
+                                    <div id="newscarousel" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="card mb-3 border-0">
+                                                    <div class="d-flex gap-3">
+                                                        <div class="">
+                                                            <div
+                                                                class="border rounded-circle news-icon d-flex align-items-center justify-content-center">
+                                                                <img src="assets/images/fluent_news.svg"
+                                                                    alt="fluent_news" width="20px" height="20px" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="">
+                                                            <div class="card-body p-0">
+                                                                <p class="card-title fw-medium">Indian student tops
+                                                                    harward!</p>
+                                                                <p class="card-text news-card-text fw-normal">Indian
+                                                                    student tops harward university and makes history.
+                                                                    Its the first time for an Indian student to do
+                                                                    this.<a href="#">Read More</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="card mb-3 border-0">
+                                                    <div class="d-flex gap-3">
+                                                        <div class="">
+                                                            <div
+                                                                class="border rounded-circle news-icon d-flex align-items-center justify-content-center">
+                                                                <img src="assets/images/fluent_news.svg"
+                                                                    alt="fluent_news" width="20px" height="20px" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="">
+                                                            <div class="card-body p-0">
+                                                                <p class="card-title fw-medium">Indian student tops
+                                                                    harward!</p>
+                                                                <p class="card-text news-card-text fw-normal">Indian
+                                                                    student tops harward university and makes history.
+                                                                    Its the first time for an Indian student to do
+                                                                    this.<a href="#">Read More</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="card mb-3 border-0">
+                                                    <div class="d-flex gap-3">
+                                                        <div class="">
+                                                            <div
+                                                                class="border rounded-circle news-icon d-flex align-items-center justify-content-center">
+                                                                <img src="assets/images/fluent_news.svg"
+                                                                    alt="fluent_news" width="20px" height="20px" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="">
+                                                            <div class="card-body p-0">
+                                                                <p class="card-title fw-medium">Indian student tops
+                                                                    harward!</p>
+                                                                <p class="card-text news-card-text fw-normal">Indian
+                                                                    student tops harward university and makes history.
+                                                                    Its the first time for an Indian student to do
+                                                                    this.<a href="#">Read More</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-indicators position-relative mb-0">
+                                            <button type="button" data-bs-target="#newscarousel" data-bs-slide-to="0"
+                                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#newscarousel" data-bs-slide-to="1"
+                                                aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#newscarousel" data-bs-slide-to="2"
+                                                aria-label="Slide 3"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- cart end here -->
+                                <!-- cart start here -->
+                                <div class="bg-white p-3 news-card upcoming-event-section">
+                                    <div class="d-flex">
+                                        <p class="fw-bold">Upcoming Events</p>
+                                        <div>
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#eventcarousel" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#eventcarousel" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div id="eventcarousel" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="card border-0">
+                                                    <div class="row mx-auto g-0">
+                                                        <img src="assets/images/event-img.png" alt="event-img" />
+                                                        <div class="card-body py-2 px-0">
+                                                            <div class="d-flex justify-content-between">
+                                                                <div>
+                                                                    <p class="card-title fw-medium mt-2 mb-0">Event Name
+                                                                        Goes here</p>
+                                                                    <p class="event-date fw-medium">7 Jan 2023</p>
+                                                                </div>
+                                                                <div
+                                                                    class="event-time rounded text-center p-1 d-flex align-items-center justify-content-center flex-column">
+                                                                    4:30 <span>PM</span>
+                                                                </div>
+                                                            </div>
+                                                            <p
+                                                                class="card-text news-card-text fw-normal mb-2 d-flex align-items-center gap-2">
+                                                                <img src="assets/images/university_icon.svg"
+                                                                    alt="icon" />
+                                                                <span>University of New York</span>
+                                                            </p>
+                                                            <p
+                                                                class="card-text news-card-text fw-normal mb-2 d-flex align-items-center gap-2">
+                                                                <img src="assets/images/user.svg" alt="icon" />
+                                                                <span>By Kishori Gupta</span>
+                                                            </p>
+                                                            <button type="button"
+                                                                class="btn btn-primary w-100 mt-3">Register Now</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="card border-0">
+                                                    <div class="row mx-auto g-0">
+                                                        <img src="assets/images/event-img.png" alt="event-img" />
+                                                        <div class="card-body py-2 px-0">
+                                                            <div class="d-flex justify-content-between">
+                                                                <div>
+                                                                    <p class="card-title fw-medium mt-2 mb-0">Event Name
+                                                                        Goes here</p>
+                                                                    <p class="event-date fw-medium">7 Jan 2023</p>
+                                                                </div>
+                                                                <div
+                                                                    class="event-time rounded text-center p-1 d-flex align-items-center justify-content-center flex-column">
+                                                                    4:30 <span>PM</span>
+                                                                </div>
+                                                            </div>
+                                                            <p
+                                                                class="card-text news-card-text fw-normal mb-2 d-flex align-items-center gap-2">
+                                                                <img src="assets/images/university_icon.svg"
+                                                                    alt="icon" />
+                                                                <span>University of New York</span>
+                                                            </p>
+                                                            <p
+                                                                class="card-text news-card-text fw-normal mb-2 d-flex align-items-center gap-2">
+                                                                <img src="assets/images/user.svg" alt="icon" />
+                                                                <span>By Kishori Gupta</span>
+                                                            </p>
+                                                            <button type="button"
+                                                                class="btn btn-primary w-100 mt-3">Register Now</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="card border-0">
+                                                    <div class="row mx-auto g-0">
+                                                        <img src="assets/images/event-img.png" alt="event-img" />
+                                                        <div class="card-body py-2 px-0">
+                                                            <div class="d-flex justify-content-between">
+                                                                <div>
+                                                                    <p class="card-title fw-medium mt-2 mb-0">Event Name
+                                                                        Goes here</p>
+                                                                    <p class="event-date fw-medium">7 Jan 2023</p>
+                                                                </div>
+                                                                <div
+                                                                    class="event-time rounded text-center p-1 d-flex align-items-center justify-content-center flex-column">
+                                                                    4:30 <span>PM</span>
+                                                                </div>
+                                                            </div>
+                                                            <p
+                                                                class="card-text news-card-text fw-normal mb-2 d-flex align-items-center gap-2">
+                                                                <img src="assets/images/university_icon.svg"
+                                                                    alt="icon" />
+                                                                <span>University of New York</span>
+                                                            </p>
+                                                            <p
+                                                                class="card-text news-card-text fw-normal mb-2 d-flex align-items-center gap-2">
+                                                                <img src="assets/images/user.svg" alt="icon" />
+                                                                <span>By Kishori Gupta</span>
+                                                            </p>
+                                                            <button type="button"
+                                                                class="btn btn-primary w-100 mt-3">Register Now</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- cart end here -->
+                                <!-- cart start here -->
+                                <div class="quick-links-section">
+                                    <p class="fw-bold">Quick Links</p>
+                                    <div class="bg-white p-2 external-link-box px-4 py-3">
+                                        <a class="d-flex align-items-center justify-content-between external-link-text">
+                                            Learning resourses
+                                            <button class="border-0 bg-white">
+                                                <img src="assets/images/external-link.svg" alt="link" />
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div class="bg-white p-2 external-link-box px-4 py-3">
+                                        <a class="d-flex align-items-center justify-content-between external-link-text">
+                                            Learning resourses
+                                            <button class="border-0 bg-white">
+                                                <img src="assets/images/external-link.svg" alt="link" />
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div class="bg-white p-2 external-link-box px-4 py-3">
+                                        <a class="d-flex align-items-center justify-content-between external-link-text">
+                                            Learning resourses
+                                            <button class="border-0 bg-white">
+                                                <img src="assets/images/external-link.svg" alt="link" />
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div class="bg-white p-2 external-link-box px-4 py-3">
+                                        <a class="d-flex align-items-center justify-content-between external-link-text">
+                                            Learning resourses
+                                            <button class="border-0 bg-white">
+                                                <img src="assets/images/external-link.svg" alt="link" />
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div class="bg-white p-2 external-link-box px-4 py-3">
+                                        <a class="d-flex align-items-center justify-content-between external-link-text">
+                                            Learning resourses
+                                            <button class="border-0 bg-white">
+                                                <img src="assets/images/external-link.svg" alt="link" />
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- cart end here -->
+                                <!-- cart start here -->
+                                <div class="contact-regional-section mt-4">
+                                    <p class="fw-bold">Contact Regional Manager</p>
+                                    <div class="card mb-3">
+                                        <div class="row align-items-center g-0 px-3 py-2">
+                                            <div class="col-md-2">
+                                                <img src="assets/images/manager-img.svg" class="img-fluid rounded-start"
+                                                    alt="manager-img">
+                                            </div>
+                                            <div class="col-md-10">
+                                                <div class="card-body p-0 p-md-2">
+                                                    <p class="manager-name fw-medium mb-0">Santosh Sharma</p>
+                                                    <div class="d-flex d-md-block gap-2 manager-details">
+                                                        <span class="manager-contact">+91 9876543210 </span>
+                                                        <span>|</span>
+                                                        <span class="manager-location"> Hyderabad</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="p-1 text-center manager-email">sshatmal123@kcoverseas.com</div>
+                                    </div>
+                                    <div class="card mb-3">
+                                        <div class="row align-items-center g-0 px-3 py-2">
+                                            <div class="col-md-2">
+                                                <img src="assets/images/manager-img.svg" class="img-fluid rounded-start"
+                                                    alt="manager-img">
+                                            </div>
+                                            <div class="col-md-10">
+                                                <div class="card-body p-0 p-md-2">
+                                                    <p class="manager-name fw-medium mb-0">Santosh Sharma</p>
+                                                    <div class="d-flex d-md-block gap-2 manager-details">
+                                                        <span class="manager-contact">+91 9876543210 </span>
+                                                        <span>|</span>
+                                                        <span class="manager-location"> Hyderabad</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="p-1 text-center manager-email">sshatmal123@kcoverseas.com</div>
+                                    </div>
+                                    <div class="card mb-3">
+                                        <div class="row align-items-center g-0 px-3 py-2">
+                                            <div class="col-md-2">
+                                                <img src="assets/images/manager-img.svg" class="img-fluid rounded-start"
+                                                    alt="manager-img">
+                                            </div>
+                                            <div class="col-md-10">
+                                                <div class="card-body p-0 p-md-2">
+                                                    <p class="manager-name fw-medium mb-0">Santosh Sharma</p>
+                                                    <div class="d-flex d-md-block gap-2 manager-details">
+                                                        <span class="manager-contact">+91 9876543210 </span>
+                                                        <span>|</span>
+                                                        <span class="manager-location"> Hyderabad</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="p-1 text-center manager-email">sshatmal123@kcoverseas.com</div>
+                                    </div>
+                                </div>
+                                <!-- cart end here -->
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Main Wrapper End here -->
+<!-- Js files start here -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+<script src="assets/js/menu.js"></script>
+<!-- Js files start End -->
+</body>
+</html>
